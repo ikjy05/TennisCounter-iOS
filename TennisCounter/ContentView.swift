@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  TennisCounter
 //
-//  Created by macbook air on 2021/12/06.
+//  Created by AppleBoy on 2021/12/06.
 //
 
 import SwiftUI
@@ -61,11 +61,11 @@ struct AdaptiveView<Content: View>: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 struct DeviceRotationViewModifier: ViewModifier {
     let action: (UIDeviceOrientation) -> Void
 
@@ -78,8 +78,8 @@ struct DeviceRotationViewModifier: ViewModifier {
     }
 }
 
-extension View {
-    func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
-        self.modifier(DeviceRotationViewModifier(action: action))
-    }
-}
+//extension View {
+//    func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
+//        self.modifier(DeviceRotationViewModifier(action: action))
+//    }
+//}
