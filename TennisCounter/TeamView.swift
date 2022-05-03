@@ -48,7 +48,7 @@ struct TeamView: View {
                 Spacer()
                 
                 Text(points[team.point])
-                    .frame(width: 40)
+//                    .frame(width: 40)
 
                 Spacer()
                 
