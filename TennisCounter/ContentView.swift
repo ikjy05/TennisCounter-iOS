@@ -27,7 +27,7 @@ struct ContentView: View {
             }
             .onLongPressGesture {
                 our = Team()
-                your = Team(isYou: true)
+                your = Team(isYou: true)                
             }
             .preferredColorScheme(.dark)
             
