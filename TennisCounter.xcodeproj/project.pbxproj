@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		053AD867281A5F1100852CB2 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053AD866281A5F1100852CB2 /* Banner.swift */; };
+		0556EE86283DB59A00311E25 /* OrientationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE85283DB59A00311E25 /* OrientationInfo.swift */; };
+		0556EE87283DB59A00311E25 /* OrientationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE85283DB59A00311E25 /* OrientationInfo.swift */; };
+		0556EE88283DB59A00311E25 /* OrientationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE85283DB59A00311E25 /* OrientationInfo.swift */; };
 		0558D12D27CF20C000105588 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B962A2275D9F1E00FAD041 /* ContentView.swift */; };
 		0558D13027CF2C1D00105588 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0558D12F27CF2C1D00105588 /* TeamView.swift */; };
 		0558D13127CF2C1D00105588 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0558D12F27CF2C1D00105588 /* TeamView.swift */; };
@@ -105,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		053AD866281A5F1100852CB2 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		0556EE85283DB59A00311E25 /* OrientationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationInfo.swift; sourceTree = "<group>"; };
 		0558D12727CCA8D500105588 /* TennisCounter WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TennisCounter WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		0558D12B27CEECEC00105588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0558D12F27CF2C1D00105588 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				05B96271275D9F1C00FAD041 /* ContentView.swift */,
 				0558D12F27CF2C1D00105588 /* TeamView.swift */,
 				053AD866281A5F1100852CB2 /* Banner.swift */,
+				0556EE85283DB59A00311E25 /* OrientationInfo.swift */,
 				05B96273275D9F1D00FAD041 /* Assets.xcassets */,
 				05B96275275D9F1D00FAD041 /* Preview Content */,
 				0558D12727CCA8D500105588 /* TennisCounter WatchKit App-Bridging-Header.h */,
@@ -623,6 +628,7 @@
 				053AD867281A5F1100852CB2 /* Banner.swift in Sources */,
 				05B96270275D9F1C00FAD041 /* TennisCounterApp.swift in Sources */,
 				0558D13027CF2C1D00105588 /* TeamView.swift in Sources */,
+				0556EE86283DB59A00311E25 /* OrientationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0556EE87283DB59A00311E25 /* OrientationInfo.swift in Sources */,
 				05B96281275D9F1D00FAD041 /* TennisCounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +647,7 @@
 			files = (
 				05B9628D275D9F1D00FAD041 /* TennisCounterUITestsLaunchTests.swift in Sources */,
 				05B9628B275D9F1D00FAD041 /* TennisCounterUITests.swift in Sources */,
+				0556EE88283DB59A00311E25 /* OrientationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

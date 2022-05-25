@@ -38,7 +38,9 @@ struct ContentView: View {
 
 
 struct AdaptiveView<Content: View>: View {
-    @Environment(\.verticalSizeClass) var verticalSizeClass
+//    @EnvironmentObject var orientationInfo: OrientationInfo
+    @StateObject var orientationInfo = OrientationInfo()
+//    @Environment(\.verticalSizeClass) var verticalSizeClass
 //    @Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
     var content: Content
     
@@ -48,7 +50,8 @@ struct AdaptiveView<Content: View>: View {
     
     
     var body: some View {
-        if verticalSizeClass == .compact {
+//        if verticalSizeClass == .compact {
+        if orientationInfo.orientation == .landscape {
             HStack {
                 content
             }

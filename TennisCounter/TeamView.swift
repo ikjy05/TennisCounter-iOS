@@ -48,7 +48,7 @@ struct TeamView: View {
                 Spacer()
                 
                 Text(points[team.point])
-                    .font(.system(size: 50))
+                    .font(.system(size: 300))
                     .minimumScaleFactor(0.2)
 //                    .frame(width: 40)
 
