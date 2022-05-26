@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TennisCounterApp: App {
+    
+    var shared = SharedViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(shared)
         }
     }
 }

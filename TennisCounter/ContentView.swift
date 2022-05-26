@@ -15,6 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         
+        ZStack {
         VStack {
             AdaptiveView {
                 TeamView(team: $our, your: $your)
@@ -33,13 +34,18 @@ struct ContentView: View {
             
             
         }
+            VStack {
+                Spacer()
+                Banner()
+            }
+        }
     }
 }
 
 
 struct AdaptiveView<Content: View>: View {
 //    @EnvironmentObject var orientationInfo: OrientationInfo
-    @StateObject var orientationInfo = OrientationInfo()
+    @EnvironmentObject var shared: SharedViewModel
 //    @Environment(\.verticalSizeClass) var verticalSizeClass
 //    @Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
     var content: Content
@@ -51,7 +57,7 @@ struct AdaptiveView<Content: View>: View {
     
     var body: some View {
 //        if verticalSizeClass == .compact {
-        if orientationInfo.orientation == .landscape {
+        if shared.orientation == .landscape {
             HStack {
                 content
             }
