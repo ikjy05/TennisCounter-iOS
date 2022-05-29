@@ -16,24 +16,24 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-        VStack {
-            AdaptiveView {
-                TeamView(team: $our, your: $your)
-                    .background(Color(.black))
-                    .foregroundColor(.white)
+            VStack {
+                AdaptiveView {
+                    TeamView(team: $our, your: $your)
+                        .background(Color(.black))
+                        .foregroundColor(.white)
+                    
+                    TeamView(team: $your, your: $our)
+                        .background(Color(.white))
+                        .foregroundColor(.black)
+                }
+                .onLongPressGesture {
+                    our = Team()
+                    your = Team(isYou: true)
+                }
+                .preferredColorScheme(.dark)
                 
-                TeamView(team: $your, your: $our)
-                    .background(Color(.white))
-                    .foregroundColor(.black)
+                
             }
-            .onLongPressGesture {
-                our = Team()
-                your = Team(isYou: true)                
-            }
-            .preferredColorScheme(.dark)
-            
-            
-        }
             VStack {
                 Spacer()
                 Banner()

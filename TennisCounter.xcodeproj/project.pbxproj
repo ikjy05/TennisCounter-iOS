@@ -11,9 +11,9 @@
 		0556EE86283DB59A00311E25 /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE85283DB59A00311E25 /* SharedViewModel.swift */; };
 		0556EE87283DB59A00311E25 /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE85283DB59A00311E25 /* SharedViewModel.swift */; };
 		0556EE88283DB59A00311E25 /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE85283DB59A00311E25 /* SharedViewModel.swift */; };
+		0556EE8D28406CCD00311E25 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556EE8B28406CBF00311E25 /* TeamView.swift */; };
 		0558D12D27CF20C000105588 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B962A2275D9F1E00FAD041 /* ContentView.swift */; };
 		0558D13027CF2C1D00105588 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0558D12F27CF2C1D00105588 /* TeamView.swift */; };
-		0558D13127CF2C1D00105588 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0558D12F27CF2C1D00105588 /* TeamView.swift */; };
 		05B96270275D9F1C00FAD041 /* TennisCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9626F275D9F1C00FAD041 /* TennisCounterApp.swift */; };
 		05B96272275D9F1C00FAD041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B96271275D9F1C00FAD041 /* ContentView.swift */; };
 		05B96274275D9F1D00FAD041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B96273275D9F1D00FAD041 /* Assets.xcassets */; };
@@ -109,6 +109,7 @@
 /* Begin PBXFileReference section */
 		053AD866281A5F1100852CB2 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		0556EE85283DB59A00311E25 /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
+		0556EE8B28406CBF00311E25 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		0558D12727CCA8D500105588 /* TennisCounter WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TennisCounter WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		0558D12B27CEECEC00105588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0558D12F27CF2C1D00105588 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
@@ -275,6 +276,7 @@
 			children = (
 				05B962A0275D9F1E00FAD041 /* TennisCounterApp.swift */,
 				05B962A2275D9F1E00FAD041 /* ContentView.swift */,
+				0556EE8B28406CBF00311E25 /* TeamView.swift */,
 				05B962A4275D9F1E00FAD041 /* NotificationController.swift */,
 				05B962A6275D9F1E00FAD041 /* NotificationView.swift */,
 				05B962A8275D9F1E00FAD041 /* ComplicationController.swift */,
@@ -660,7 +662,7 @@
 				05B962A9275D9F1E00FAD041 /* ComplicationController.swift in Sources */,
 				05B962A1275D9F1E00FAD041 /* TennisCounterApp.swift in Sources */,
 				05B962A7275D9F1E00FAD041 /* NotificationView.swift in Sources */,
-				0558D13127CF2C1D00105588 /* TeamView.swift in Sources */,
+				0556EE8D28406CCD00311E25 /* TeamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

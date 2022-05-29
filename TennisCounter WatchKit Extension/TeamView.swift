@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TeamView: View {
 
-    @EnvironmentObject var shared: SharedViewModel
     
     let points = ["0", "15", "30", "40", "Ad"]
     let size: CGFloat = 32
@@ -24,10 +23,10 @@ struct TeamView: View {
                 
                 Spacer()
                 
-                if (team.isYou && shared.orientation == .portrait) ||
-                    shared.orientation == .landscape {
+                if team.isYou {
                     Text(String(team.score))
-                        .font(.system(size: size, weight: .semibold))
+                        .fontWeight(.semibold)
+//                        .font(.system(size: size))
                 }
                 
                 HStack {
@@ -59,12 +58,12 @@ struct TeamView: View {
                     
                     Spacer()
                     
-                    let width = geometry.size.width * 0.6
+//                    let width = geometry.size.width * 0.6
                     Text(points[team.point])
-                        .font(.system(size: 300))
+                        .font(.system(size: 40))
                         .minimumScaleFactor(0.2)
-    //                    .frame(width: 40)
-                        .frame(width: width, height: width)
+                        .frame(width: 40)
+//                        .frame(width: width, height: width)
 
                     Spacer()
                     
@@ -91,9 +90,10 @@ struct TeamView: View {
                 }
                 .font(.system(size: size))
                 
-                if !team.isYou && shared.orientation == .portrait {
+                if !team.isYou {
                     Text(String(team.score))
-                        .font(.system(size: size, weight: .semibold))
+                        .fontWeight(.semibold)
+//                        .font(.system(size: size))
                 }
                 
                 Spacer()
