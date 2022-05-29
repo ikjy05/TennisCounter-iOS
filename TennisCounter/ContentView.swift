@@ -15,28 +15,44 @@ struct ContentView: View {
     
     var body: some View {
         
-        ZStack {
-            VStack {
-                AdaptiveView {
-                    TeamView(team: $our, your: $your)
-                        .background(Color(.black))
-                        .foregroundColor(.white)
+        GeometryReader { geometry in
+            ZStack {
+                VStack {
+                    AdaptiveView {
+                        TeamView(team: $our, your: $your)
+                            .background(Color(.black))
+                            .foregroundColor(.white)
+                        
+                        TeamView(team: $your, your: $our)
+                            .background(Color(.white))
+                            .foregroundColor(.black)
+                    }
                     
-                    TeamView(team: $your, your: $our)
-                        .background(Color(.white))
-                        .foregroundColor(.black)
+                    .preferredColorScheme(.dark)
+                    
                 }
-                .onLongPressGesture {
-                    our = Team()
-                    your = Team(isYou: true)
+                VStack {
+                    ZStack {
+                        Rectangle()
+                            .opacity(0.00001)
+//                        Spacer()
+                        .frame(width: geometry.size.width / 2)
+                    }
+                    .onLongPressGesture {
+                        our = Team()
+                        your = Team(isYou: true)
+                        print("Long touch to reset")
+                    }
+//                    Spacer()
+//                        .frame(width: geometry.size.width / 2)
+//                        .onLongPressGesture {
+//                            our = Team()
+//                            your = Team(isYou: true)
+//                            print("Long touch")
+//                        }
+                    
+                    Banner()
                 }
-                .preferredColorScheme(.dark)
-                
-                
-            }
-            VStack {
-                Spacer()
-                Banner()
             }
         }
     }
