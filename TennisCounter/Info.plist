@@ -4,8 +4,8 @@
 <dict>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-2051058860164579~8481549070</string>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleDefault</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -157,5 +157,7 @@
 			<string>3qcr597p9d.skadnetwork</string>
 		</dict>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 </dict>
 </plist>

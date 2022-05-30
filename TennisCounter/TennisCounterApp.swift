@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct TennisCounterApp: App {
     
     var shared = SharedViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {

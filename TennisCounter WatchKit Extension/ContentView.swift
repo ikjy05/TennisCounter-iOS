@@ -14,21 +14,50 @@ struct ContentView: View {
     @GestureState var press = false
     
     var body: some View {
-            
-        VStack {
-            TeamView(team: $our, your: $your)
-                .background(Color(.black))
-                .foregroundColor(.white)
-            
-            TeamView(team: $your, your: $our)
-                .background(Color(.white))
-                .foregroundColor(.black)
+         
+        GeometryReader { geometry in
+            ZStack {
+                VStack {
+                    TeamView(team: $our, your: $your)
+                        .background(Color(.black))
+                        .foregroundColor(.white)
+                    
+                    TeamView(team: $your, your: $our)
+                        .background(Color(.white))
+                        .foregroundColor(.black)
+                }
+                VStack {
+                    ZStack {
+                        Rectangle()
+                            .opacity(0.00001)
+//                        Spacer()
+                            .frame(width: geometry.size.width * 0.4)
+                    }
+                    .onLongPressGesture {
+                        our = Team()
+                        your = Team(isYou: true)
+                        print("Long touch to reset")
+                        WKInterfaceDevice.current().play(.start)
+                    }
+                    
+                }
+            }
         }
-        .onLongPressGesture {
-            our = Team()
-            your = Team(isYou: true)
-            WKInterfaceDevice.current().play(.start)
-        }
+//
+//        VStack {
+//            TeamView(team: $our, your: $your)
+//                .background(Color(.black))
+//                .foregroundColor(.white)
+//
+//            TeamView(team: $your, your: $our)
+//                .background(Color(.white))
+//                .foregroundColor(.black)
+//        }
+//        .onLongPressGesture {
+//            our = Team()
+//            your = Team(isYou: true)
+//            WKInterfaceDevice.current().play(.start)
+//        }
 //        .gesture(LongPressGesture()
 //            .updating($press, body: { currentState, gestureState, transaction in
 //                gestureState = currentState

@@ -59,7 +59,7 @@ struct TeamView: View {
                     
                     Spacer()
                     
-                    let width = geometry.size.width * 0.6
+                    let width = geometry.size.width * 0.5
                     Text(points[team.point])
                         .font(.system(size: 300))
                         .minimumScaleFactor(0.2)

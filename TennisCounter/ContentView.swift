@@ -43,14 +43,6 @@ struct ContentView: View {
                         your = Team(isYou: true)
                         print("Long touch to reset")
                     }
-//                    Spacer()
-//                        .frame(width: geometry.size.width / 2)
-//                        .onLongPressGesture {
-//                            our = Team()
-//                            your = Team(isYou: true)
-//                            print("Long touch")
-//                        }
-                    
                     Banner()
                 }
             }
