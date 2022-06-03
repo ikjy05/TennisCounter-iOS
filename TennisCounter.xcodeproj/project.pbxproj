@@ -117,7 +117,7 @@
 		0558D12727CCA8D500105588 /* TennisCounter WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TennisCounter WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		0558D12B27CEECEC00105588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0558D12F27CF2C1D00105588 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
-		05B9626C275D9F1C00FAD041 /* LoveLove Tennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoveLove Tennis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B9626C275D9F1C00FAD041 /* TECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B9626F275D9F1C00FAD041 /* TennisCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisCounterApp.swift; sourceTree = "<group>"; };
 		05B96271275D9F1C00FAD041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05B96273275D9F1D00FAD041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		05B9626D275D9F1C00FAD041 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05B9626C275D9F1C00FAD041 /* LoveLove Tennis.app */,
+				05B9626C275D9F1C00FAD041 /* TECO.app */,
 				05B9627C275D9F1D00FAD041 /* TennisCounterTests.xctest */,
 				05B96286275D9F1D00FAD041 /* TennisCounterUITests.xctest */,
 				05B96290275D9F1D00FAD041 /* LoveLove Tennis WatchKit App.app */,
@@ -341,9 +341,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05B9626B275D9F1C00FAD041 /* LoveLove Tennis */ = {
+		05B9626B275D9F1C00FAD041 /* TECO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05B962D1275D9F1E00FAD041 /* Build configuration list for PBXNativeTarget "LoveLove Tennis" */;
+			buildConfigurationList = 05B962D1275D9F1E00FAD041 /* Build configuration list for PBXNativeTarget "TECO" */;
 			buildPhases = (
 				9630FFB0B40764F7B952A431 /* [CP] Check Pods Manifest.lock */,
 				05B96268275D9F1C00FAD041 /* Sources */,
@@ -358,13 +358,13 @@
 			dependencies = (
 				05B96293275D9F1D00FAD041 /* PBXTargetDependency */,
 			);
-			name = "LoveLove Tennis";
+			name = TECO;
 			packageProductDependencies = (
 				59DD73E62844CC3A00E397B4 /* FirebaseAnalytics */,
 				59DD73E82844CC3A00E397B4 /* FirebaseCrashlytics */,
 			);
 			productName = TennisCounter;
-			productReference = 05B9626C275D9F1C00FAD041 /* LoveLove Tennis.app */;
+			productReference = 05B9626C275D9F1C00FAD041 /* TECO.app */;
 			productType = "com.apple.product-type.application";
 		};
 		05B9627B275D9F1D00FAD041 /* TennisCounterTests */ = {
@@ -527,7 +527,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05B9626B275D9F1C00FAD041 /* LoveLove Tennis */,
+				05B9626B275D9F1C00FAD041 /* TECO */,
 				05B9627B275D9F1D00FAD041 /* TennisCounterTests */,
 				05B96285275D9F1D00FAD041 /* TennisCounterUITests */,
 				05B9628F275D9F1D00FAD041 /* TennisCounter WatchKit App */,
@@ -725,12 +725,12 @@
 /* Begin PBXTargetDependency section */
 		05B9627E275D9F1D00FAD041 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 05B9626B275D9F1C00FAD041 /* LoveLove Tennis */;
+			target = 05B9626B275D9F1C00FAD041 /* TECO */;
 			targetProxy = 05B9627D275D9F1D00FAD041 /* PBXContainerItemProxy */;
 		};
 		05B96288275D9F1D00FAD041 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 05B9626B275D9F1C00FAD041 /* LoveLove Tennis */;
+			target = 05B9626B275D9F1C00FAD041 /* TECO */;
 			targetProxy = 05B96287275D9F1D00FAD041 /* PBXContainerItemProxy */;
 		};
 		05B96293275D9F1D00FAD041 /* PBXTargetDependency */ = {
@@ -878,8 +878,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TennisCounter WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TennisCounter WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CFBundleDisplayName = "TECO for Watch";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = TennisCounter_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -910,8 +910,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TennisCounter WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TennisCounter WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CFBundleDisplayName = "TECO for Watch";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = TennisCounter_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1309,7 +1309,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05B962D1275D9F1E00FAD041 /* Build configuration list for PBXNativeTarget "LoveLove Tennis" */ = {
+		05B962D1275D9F1E00FAD041 /* Build configuration list for PBXNativeTarget "TECO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05B962D2275D9F1E00FAD041 /* Debug */,

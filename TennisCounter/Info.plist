@@ -159,5 +159,7 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>ㅇㅇ?</string>
 </dict>
 </plist>

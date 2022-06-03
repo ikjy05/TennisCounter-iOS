@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import AppTrackingTransparency
 
 @main
 struct TennisCounterApp: App {
@@ -20,6 +21,13 @@ struct TennisCounterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(shared)
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+                    //                                    UIApplication.shared.applicationIconBadgeNumber = 0
+                    ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                        // Tracking authorization completed. Start loading ads here.
+                    })
+                    
+                }
         }
     }
 }
