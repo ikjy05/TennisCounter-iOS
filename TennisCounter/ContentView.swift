@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var your = Team(isYou: true, isServe: true)
     @State var our = Team()
-    @State var your = Team(isYou: true)
 //    @State private var orientation = UIDeviceOrientation.unknown
 //    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
@@ -27,25 +27,39 @@ struct ContentView: View {
                             .background(Color(.white))
                             .foregroundColor(.black)
                     }
-                    
                     .preferredColorScheme(.dark)
                     
                 }
-                VStack {
-                    ZStack {
-                        Rectangle()
-                            .opacity(0.00001)
-//                        Spacer()
-                        .frame(width: geometry.size.width / 2)
-                    }
+                Rectangle()
+                    .opacity(0.00001)
+                    .frame(width: geometry.size.width * 0.4)
                     .onLongPressGesture {
-                        our = Team()
-                        your = Team(isYou: true)
+                        //                    our = Team()
+                        //                    your = Team(isYou: true)
+                        our.point = 0
+                        your.point = 0
+                        our.score = 0
+                        your.score = 0
                         print("Long touch to reset")
                     }
+
+                VStack {
+                    Spacer()
                     Banner()
                 }
+                .padding(.bottom, geometry.safeAreaInsets.bottom)
+                VStack {
+                    if your.isServe {
+                        Image("ball_white")
+                    }
+                    Spacer()
+                    if our.isServe {
+                        Image("ball")
+                    }
+                }
             }
+            
+
         }
     }
 }

@@ -16,6 +16,8 @@ struct TeamView: View {
     @Binding var team: Team
     @Binding var your: Team
     
+    let serveImage = "ball"
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -28,7 +30,14 @@ struct TeamView: View {
                         .fontWeight(.semibold)
 //                        .font(.system(size: size))
                 }
-                
+//                else {
+//                    Image("ball_white")
+//                    Button {
+//
+//                    } label: {
+//
+//                    }
+//                }
                 HStack {
                     
                     Spacer()
@@ -95,19 +104,20 @@ struct TeamView: View {
                         .fontWeight(.semibold)
 //                        .font(.system(size: size))
                 }
-                
+//                else {
+//                    Image("ball")
+                        //.foregroundColor(.black)
+//                    Button {
+//
+//                    } label: {
+//                        Image("serve_black")
+//                    }
+//                }
                 Spacer()
             }
         }
         
     }
-    
-}
-
-struct Team: Equatable {
-    var point = 0
-    var score = 0
-    var isYou = false
     
 }
 

@@ -34,6 +34,8 @@
 		05B962C4275D9F1E00FAD041 /* TennisCounter_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B962C3275D9F1E00FAD041 /* TennisCounter_WatchKit_AppUITests.swift */; };
 		05B962C6275D9F1E00FAD041 /* TennisCounter_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B962C5275D9F1E00FAD041 /* TennisCounter_WatchKit_AppUITestsLaunchTests.swift */; };
 		2A1B0D0CB962D43DE58DB3D8 /* Pods_TennisCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CEB7893D716A80B354509F /* Pods_TennisCounter.framework */; };
+		596E4C0E2859DFA100627B00 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E4C0D2859DFA100627B00 /* Common.swift */; };
+		596E4C0F2859DFA100627B00 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E4C0D2859DFA100627B00 /* Common.swift */; };
 		59DD73E72844CC3A00E397B4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 59DD73E62844CC3A00E397B4 /* FirebaseAnalytics */; };
 		59DD73E92844CC3A00E397B4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 59DD73E82844CC3A00E397B4 /* FirebaseCrashlytics */; };
 		59DD73EC2844CD6F00E397B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59DD73EB2844CD6F00E397B4 /* GoogleService-Info.plist */; };
@@ -145,6 +147,7 @@
 		05B962C3275D9F1E00FAD041 /* TennisCounter_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisCounter_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		05B962C5275D9F1E00FAD041 /* TennisCounter_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisCounter_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		37CEB7893D716A80B354509F /* Pods_TennisCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TennisCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		596E4C0D2859DFA100627B00 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		59DD73EB2844CD6F00E397B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75DF14D0EB295A5CB66F4CEF /* Pods-TennisCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisCounter.debug.xcconfig"; path = "Target Support Files/Pods-TennisCounter/Pods-TennisCounter.debug.xcconfig"; sourceTree = "<group>"; };
 		9B2CA2430FA636F5E3AD8478 /* Pods-TennisCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisCounter.release.xcconfig"; path = "Target Support Files/Pods-TennisCounter/Pods-TennisCounter.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +242,7 @@
 				0558D12F27CF2C1D00105588 /* TeamView.swift */,
 				053AD866281A5F1100852CB2 /* Banner.swift */,
 				0556EE85283DB59A00311E25 /* SharedViewModel.swift */,
+				596E4C0D2859DFA100627B00 /* Common.swift */,
 				05B96273275D9F1D00FAD041 /* Assets.xcassets */,
 				05B96275275D9F1D00FAD041 /* Preview Content */,
 				0558D12727CCA8D500105588 /* TennisCounter WatchKit App-Bridging-Header.h */,
@@ -667,6 +671,7 @@
 				053AD867281A5F1100852CB2 /* Banner.swift in Sources */,
 				05B96270275D9F1C00FAD041 /* TennisCounterApp.swift in Sources */,
 				0558D13027CF2C1D00105588 /* TeamView.swift in Sources */,
+				596E4C0E2859DFA100627B00 /* Common.swift in Sources */,
 				0556EE86283DB59A00311E25 /* SharedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +705,7 @@
 				05B962A1275D9F1E00FAD041 /* TennisCounterApp.swift in Sources */,
 				05B962A7275D9F1E00FAD041 /* NotificationView.swift in Sources */,
 				0556EE8D28406CCD00311E25 /* TeamView.swift in Sources */,
+				596E4C0F2859DFA100627B00 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,7 +878,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"TennisCounter WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = K4JR5YC2CV;
 				ENABLE_PREVIEWS = YES;
@@ -887,7 +893,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.jeongyoun.TennisCounter.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -904,7 +910,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"TennisCounter WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = K4JR5YC2CV;
 				ENABLE_PREVIEWS = YES;
@@ -919,7 +925,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.jeongyoun.TennisCounter.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -940,7 +946,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = K4JR5YC2CV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = TennisCounter_WatchKit_Extension;
@@ -951,7 +957,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.jeongyoun.TennisCounter.watchkitapp;
 				PRODUCT_NAME = "TECO for Watch";
 				SDKROOT = watchos;
@@ -973,7 +979,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = K4JR5YC2CV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = TennisCounter_WatchKit_Extension;
@@ -984,7 +990,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.jeongyoun.TennisCounter.watchkitapp;
 				PRODUCT_NAME = "TECO for Watch";
 				SDKROOT = watchos;
@@ -1005,7 +1011,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"TennisCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = K4JR5YC2CV;
 				ENABLE_PREVIEWS = YES;
@@ -1025,7 +1031,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.jeongyoun.TennisCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1042,7 +1048,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"TennisCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = K4JR5YC2CV;
 				ENABLE_PREVIEWS = YES;
@@ -1062,7 +1068,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.jeongyoun.TennisCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

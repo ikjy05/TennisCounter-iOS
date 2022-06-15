@@ -49,4 +49,3 @@ final class SharedViewModel: ObservableObject {
         }
     }
 }
-

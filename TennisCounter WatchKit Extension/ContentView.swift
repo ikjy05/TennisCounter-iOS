@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var our = Team()
+    @State var our = Team(isServe: true)
     @State var your = Team(isYou: true)
     @GestureState var press = false
     
@@ -26,21 +26,31 @@ struct ContentView: View {
                         .background(Color(.white))
                         .foregroundColor(.black)
                 }
-                VStack {
-                    ZStack {
-                        Rectangle()
-                            .opacity(0.00001)
-//                        Spacer()
-                            .frame(width: geometry.size.width * 0.4)
-                    }
-                    .onLongPressGesture {
-                        our = Team()
-                        your = Team(isYou: true)
-                        print("Long touch to reset")
-                        WKInterfaceDevice.current().play(.start)
+                
+                ZStack {
+                    Rectangle()
+                        .opacity(0.00001)
+                    //                        Spacer()
+                        .frame(width: geometry.size.width * 0.4)
+                    VStack {
+                        if your.isServe {
+                            Image("ball_white_16")
+                        }
+                        Spacer()
+                        if our.isServe {
+                            Image("ball_16")
+                        }
                     }
                     
                 }
+                .onLongPressGesture {
+                    our = Team()
+                    your = Team(isYou: true)
+                    print("Long touch to reset")
+                    WKInterfaceDevice.current().play(.start)
+                }
+                
+                
             }
         }
 //

@@ -16,7 +16,7 @@ struct TeamView: View {
     
     @Binding var team: Team
     @Binding var your: Team
-    
+        
     var body: some View {
         
         GeometryReader { geometry in
@@ -79,6 +79,9 @@ struct TeamView: View {
                             team.score += 1
                             team.point = 0
                             your.point = 0
+                            
+                            team.isServe = !team.isServe
+                            your.isServe = !your.isServe
                         }
                     }, label: {
                         Image(systemName: "chevron.up.circle")
@@ -99,18 +102,9 @@ struct TeamView: View {
                 Spacer()
             }
         }
-        
     }
     
 }
-
-struct Team: Equatable {
-    var point = 0
-    var score = 0
-    var isYou = false
-    
-}
-
 
 //struct TeamView_Previews: PreviewProvider {
 //    static var previews: some View {

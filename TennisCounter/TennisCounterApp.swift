@@ -8,6 +8,8 @@
 import SwiftUI
 import Firebase
 import AppTrackingTransparency
+import AdSupport
+import GoogleMobileAds
 
 @main
 struct TennisCounterApp: App {
@@ -16,6 +18,7 @@ struct TennisCounterApp: App {
     
     init() {
         FirebaseApp.configure()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
     
     var body: some Scene {
@@ -25,6 +28,7 @@ struct TennisCounterApp: App {
                     //                                    UIApplication.shared.applicationIconBadgeNumber = 0
                     ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
                         // Tracking authorization completed. Start loading ads here.
+                        print(ASIdentifierManager.shared().advertisingIdentifier)
                     })
                     
                 }
