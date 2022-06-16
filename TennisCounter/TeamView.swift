@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TeamView: View {
 
-    @EnvironmentObject var shared: SharedViewModel
+    @EnvironmentObject var orientationInfo: OrientationInfo
     
     let points = ["0", "15", "30", "40", "Ad"]
     let size: CGFloat = 32
@@ -24,8 +24,8 @@ struct TeamView: View {
                 
                 Spacer()
                 
-                if (team.isYou && shared.orientation == .portrait) ||
-                    shared.orientation == .landscape {
+                if (team.isYou && orientationInfo.orientation == .portrait) ||
+                    orientationInfo.orientation == .landscape {
                     Text(String(team.score))
                         .font(.system(size: size, weight: .semibold))
                 }
@@ -95,7 +95,7 @@ struct TeamView: View {
                 }
                 .font(.system(size: size))
                 
-                if !team.isYou && shared.orientation == .portrait {
+                if !team.isYou && orientationInfo.orientation == .portrait {
                     Text(String(team.score))
                         .font(.system(size: size, weight: .semibold))
                 }

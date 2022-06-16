@@ -41,5 +41,12 @@ struct Banner:View{
             BannerVC().frame(width: 320, height: 50, alignment: .center)
             Spacer()
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            //                                    UIApplication.shared.applicationIconBadgeNumber = 0
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                // Tracking authorization completed. Start loading ads here.
+                print(ASIdentifierManager.shared().advertisingIdentifier)
+            })
+        }
     }
 }

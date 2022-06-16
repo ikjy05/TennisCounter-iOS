@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var your = Team(isYou: true, isServe: true)
     @State var our = Team()
-//    @State private var orientation = UIDeviceOrientation.unknown
-//    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
+    @EnvironmentObject var orientationInfo: OrientationInfo
     
     var body: some View {
         
@@ -30,65 +30,86 @@ struct ContentView: View {
                     .preferredColorScheme(.dark)
                     
                 }
-                Rectangle()
-                    .opacity(0.00001)
-                    .frame(width: geometry.size.width * 0.4)
-                    .onLongPressGesture {
-                        //                    our = Team()
-                        //                    your = Team(isYou: true)
-                        our.point = 0
-                        your.point = 0
-                        our.score = 0
-                        your.score = 0
-                        print("Long touch to reset")
-                    }
-                    .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                        .onEnded({ value in
-                            if value.translation.width < 0 {
-                                // left
-                            }
-                            
-                            if value.translation.width > 0 {
-                                // right
-                            }
-                            if value.translation.height < 0 {
-                                // up
-                                your.isServe = true
-                                our.isServe = false
-                            }
-                            
-                            if value.translation.height > 0 {
-                                // down
-                                your.isServe = false
-                                our.isServe = true
-                            }
-                        }))
+//                Rectangle()
+//                    .opacity(0.00001)
+//                    .frame(width: geometry.size.width * 0.4)
 
                 VStack {
                     Spacer()
                     Banner()
                 }
                 .padding(.bottom, geometry.safeAreaInsets.bottom)
-                VStack {
-                    if your.isServe {
-                        Image("ball_white")
+                
+                if orientationInfo.orientation == .portrait {
+                    VStack {
+                        
+                        if your.isServe {
+                            Image("ball_white")
+                        }
+                        Spacer()
+                        if our.isServe {
+                            Image("ball")
+                        }
                     }
-                    Spacer()
-                    if our.isServe {
-                        Image("ball")
-                    }
+                    .padding()
                 }
+                else {
+                    HStack {
+                        if your.isServe {
+                            Image("ball_white")
+                                .padding(.leading, 5)
+                        }
+                        Spacer()
+                        if our.isServe {
+                            Image("ball")
+                                .padding(.trailing, 5)
+                        }
+                    }
+                    .padding(.top, geometry.safeAreaInsets.bottom)
+                }
+                
             }
             
 
         }
+        .onLongPressGesture {
+            //                    our = Team()
+            //                    your = Team(isYou: true)
+            our.point = 0
+            your.point = 0
+            our.score = 0
+            your.score = 0
+            print("Long touch to reset")
+        }
+        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+            .onEnded({ value in
+                
+                if value.translation.width < 0 {
+                    // left
+                }
+                
+                if value.translation.width > 0 {
+                    // right
+                }
+                if value.translation.height < 0 {
+                    // up
+                    your.isServe = true
+                    our.isServe = false
+                }
+                
+                if value.translation.height > 0 {
+                    // down
+                    your.isServe = false
+                    our.isServe = true
+                }
+            }))
     }
 }
 
 
 struct AdaptiveView<Content: View>: View {
 //    @EnvironmentObject var orientationInfo: OrientationInfo
-    @EnvironmentObject var shared: SharedViewModel
+    @EnvironmentObject var orientationInfo: OrientationInfo
 //    @Environment(\.verticalSizeClass) var verticalSizeClass
 //    @Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
     var content: Content
@@ -100,7 +121,7 @@ struct AdaptiveView<Content: View>: View {
     
     var body: some View {
 //        if verticalSizeClass == .compact {
-        if shared.orientation == .landscape {
+        if orientationInfo.orientation == .landscape {
             HStack {
                 content
             }

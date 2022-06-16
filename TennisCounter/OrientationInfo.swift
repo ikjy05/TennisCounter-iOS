@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-final class SharedViewModel: ObservableObject {
+final class OrientationInfo: ObservableObject {
     enum Orientation {
         case portrait
         case landscape
