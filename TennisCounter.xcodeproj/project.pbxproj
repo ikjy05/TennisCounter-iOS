@@ -36,6 +36,7 @@
 		2A1B0D0CB962D43DE58DB3D8 /* Pods_TennisCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CEB7893D716A80B354509F /* Pods_TennisCounter.framework */; };
 		596E4C0E2859DFA100627B00 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E4C0D2859DFA100627B00 /* Common.swift */; };
 		596E4C0F2859DFA100627B00 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E4C0D2859DFA100627B00 /* Common.swift */; };
+		596E4C10285ACC9800627B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B96295275D9F1D00FAD041 /* Assets.xcassets */; };
 		59DD73E72844CC3A00E397B4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 59DD73E62844CC3A00E397B4 /* FirebaseAnalytics */; };
 		59DD73E92844CC3A00E397B4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 59DD73E82844CC3A00E397B4 /* FirebaseCrashlytics */; };
 		59DD73EC2844CD6F00E397B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59DD73EB2844CD6F00E397B4 /* GoogleService-Info.plist */; };
@@ -581,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B962AE275D9F1E00FAD041 /* Preview Assets.xcassets in Resources */,
+				596E4C10285ACC9800627B00 /* Assets.xcassets in Resources */,
 				05B962AB275D9F1E00FAD041 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

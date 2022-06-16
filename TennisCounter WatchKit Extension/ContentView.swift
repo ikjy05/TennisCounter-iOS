@@ -44,12 +44,36 @@ struct ContentView: View {
                     
                 }
                 .onLongPressGesture {
-                    our = Team()
-                    your = Team(isYou: true)
+//                    our = Team()
+//                    your = Team(isYou: true)
+                    our.point = 0
+                    your.point = 0
+                    our.score = 0
+                    your.score = 0
                     print("Long touch to reset")
                     WKInterfaceDevice.current().play(.start)
                 }
-                
+                .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                    .onEnded({ value in
+                        if value.translation.width < 0 {
+                            // left
+                        }
+                        
+                        if value.translation.width > 0 {
+                            // right
+                        }
+                        if value.translation.height < 0 {
+                            // up
+                            your.isServe = true
+                            our.isServe = false
+                        }
+                        
+                        if value.translation.height > 0 {
+                            // down
+                            your.isServe = false
+                            our.isServe = true
+                        }
+                    }))
                 
             }
         }

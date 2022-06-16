@@ -42,6 +42,27 @@ struct ContentView: View {
                         your.score = 0
                         print("Long touch to reset")
                     }
+                    .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                        .onEnded({ value in
+                            if value.translation.width < 0 {
+                                // left
+                            }
+                            
+                            if value.translation.width > 0 {
+                                // right
+                            }
+                            if value.translation.height < 0 {
+                                // up
+                                your.isServe = true
+                                our.isServe = false
+                            }
+                            
+                            if value.translation.height > 0 {
+                                // down
+                                your.isServe = false
+                                our.isServe = true
+                            }
+                        }))
 
                 VStack {
                     Spacer()

@@ -46,6 +46,8 @@ struct TeamView: View {
                         if team.point == 0 {
                             team.point = 4
                             team.score -= 1
+                            
+                            serveChange()
                         }
                         else {
                             team.point -= 1
@@ -87,6 +89,8 @@ struct TeamView: View {
                             team.score += 1
                             team.point = 0
                             your.point = 0
+                            
+                            serveChange()
                         }
                     }, label: {
                         Image(systemName: "chevron.up.circle")
@@ -116,9 +120,11 @@ struct TeamView: View {
                 Spacer()
             }
         }
-        
     }
-    
+    func serveChange() {
+        team.isServe = !team.isServe
+        your.isServe = !your.isServe
+    }
 }
 
 
