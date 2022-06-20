@@ -36,7 +36,7 @@ struct TeamView: View {
                     
                     Button(action: { // Down
                         if team.point == 0 {
-                            team.point = 4
+                            team.point = 3
                             team.score -= 1
                             
                             serveChange()
@@ -70,19 +70,25 @@ struct TeamView: View {
 
                     Spacer()
                     
-                    Button(action: {
-                        if team.point < 4 {
+                    Button(action: { // Up
+                        if team.point < 3 {
                             team.point += 1
-                            if team.point == 4, your.point == 4 {
-                                your.point = 3
-                            }
                         }
                         else {
-                            team.score += 1
-                            team.point = 0
-                            your.point = 0
-                            
-                            serveChange()
+                            if team.point == 3, your.point == 3 {
+                                team.point += 1
+                            }
+                            else if team.point == 3, your.point == 4 {
+                                team.point += 1
+                                your.point = 3
+                            }
+                            else {
+                                team.score += 1
+                                team.point = 0
+                                your.point = 0
+                                
+                                serveChange()
+                            }
                         }
                     }, label: {
                         Image(systemName: "chevron.up.circle")

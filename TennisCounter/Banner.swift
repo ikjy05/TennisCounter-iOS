@@ -26,7 +26,7 @@ final private class BannerVC: UIViewControllerRepresentable  {
         viewController.view.addSubview(view)
         viewController.view.frame = CGRect(origin: .zero, size: kGADAdSizeBanner.size)
 //        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "c0bf74803ad3e70f7f7ad2a1c7afe942" ]
-        view.load(GADRequest())
+//        view.load(GADRequest())
         
         return viewController
     }
