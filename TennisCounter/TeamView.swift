@@ -79,7 +79,6 @@ struct TeamView: View {
                                 team.point += 1
                             }
                             else if team.point == 3, your.point == 4 {
-                                team.point += 1
                                 your.point = 3
                             }
                             else {
