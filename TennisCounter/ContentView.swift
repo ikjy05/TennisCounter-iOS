@@ -30,9 +30,6 @@ struct ContentView: View {
                     .preferredColorScheme(.dark)
                     
                 }
-//                Rectangle()
-//                    .opacity(0.00001)
-//                    .frame(width: geometry.size.width * 0.4)
 
                 VStack {
                     Spacer()
@@ -73,8 +70,6 @@ struct ContentView: View {
 
         }
         .onLongPressGesture {
-            //                    our = Team()
-            //                    your = Team(isYou: true)
             our.point = 0
             your.point = 0
             our.score = 0
@@ -108,10 +103,9 @@ struct ContentView: View {
 
 
 struct AdaptiveView<Content: View>: View {
-//    @EnvironmentObject var orientationInfo: OrientationInfo
+
     @EnvironmentObject var orientationInfo: OrientationInfo
-//    @Environment(\.verticalSizeClass) var verticalSizeClass
-//    @Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
+
     var content: Content
     
     public init(@ViewBuilder content: () -> Content) {
@@ -120,7 +114,6 @@ struct AdaptiveView<Content: View>: View {
     
     
     var body: some View {
-//        if verticalSizeClass == .compact {
         if orientationInfo.orientation == .landscape {
             HStack {
                 content
@@ -151,8 +144,3 @@ struct DeviceRotationViewModifier: ViewModifier {
     }
 }
 
-//extension View {
-//    func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
-//        self.modifier(DeviceRotationViewModifier(action: action))
-//    }
-//}
