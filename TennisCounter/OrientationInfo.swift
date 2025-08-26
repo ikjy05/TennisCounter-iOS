@@ -18,8 +18,11 @@ final class OrientationInfo: ObservableObject {
     @Published var orientation: Orientation
     
     private var _observer: NSObjectProtocol?
-    
+
     init() {
+        // Start generating orientation notifications to ensure updates are delivered
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+
         // fairly arbitrary starting value for 'flat' orientations
         if UIDevice.current.orientation.isLandscape {
             self.orientation = .landscape
@@ -42,10 +45,14 @@ final class OrientationInfo: ObservableObject {
         }
         
     }
-    
+
     deinit {
         if let observer = _observer {
             NotificationCenter.default.removeObserver(observer)
+        }
+        // Stop generating orientation notifications if we started them
+        if UIDevice.current.isGeneratingDeviceOrientationNotifications {
+            UIDevice.current.endGeneratingDeviceOrientationNotifications()
         }
     }
 }
